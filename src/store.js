@@ -1,8 +1,13 @@
-import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import createSagaMiddleware from "redux-saga";
 
-import posts from "./reducers/postsReducer";
-import watcherSaga from "./sagas/index";
+import rootSaga from "./sagas/index";
+import { postsReducer, postReducer } from "./reducers";
+
+const rootReducer = combineReducers({
+  postsReducer,
+  postReducer
+});
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -10,11 +15,11 @@ const reduxDevTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 export default createStore(
-  posts,
+  rootReducer,
   compose(
     applyMiddleware(sagaMiddleware),
     reduxDevTools
   )
 );
 
-sagaMiddleware.run(watcherSaga);
+sagaMiddleware.run(rootSaga);

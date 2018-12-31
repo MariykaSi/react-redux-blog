@@ -24,10 +24,10 @@ class PostList extends Component {
   }
 }
 
-const maState = state => ({
-  fetching: state.fetching,
-  posts: state.posts,
-  error: state.error
+const mapState = state => ({
+  fetching: state.postsReducer.fetching,
+  posts: state.postsReducer.posts,
+  error: state.postsReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -35,6 +35,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  maState,
+  mapState,
   mapDispatchToProps
 )(PostList);

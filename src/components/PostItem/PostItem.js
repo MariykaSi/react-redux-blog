@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./PostItem.scss";
 import itemBg from "../../img/item-bg.jpg";
+import { Link } from "react-router-dom";
 
 export default class PostItem extends Component {
   render() {
@@ -9,17 +10,16 @@ export default class PostItem extends Component {
     return (
       <div className="col-xs-6 col-sm-6 col-md-6 col-lg-4 post-item">
         <div className="entry-cover">
-          <a href="/">
+          <Link to={`/posts/${post.id}`}>
             <img alt={post.title} src={itemBg} />
-          </a>
+          </Link>
         </div>
-        <a href="/" className="entry-title">
+        <Link to={`/posts/${post.id}`} className="entry-title">
           {post.title}
-        </a>
+        </Link>
         <div className="entry-content">
-          <a href="/" title="Read More">
-            Read More
-          </a>
+          <p>{post.body}</p>
+          <Link to={`/posts/${post.id}`}>Read More</Link>
         </div>
       </div>
     );

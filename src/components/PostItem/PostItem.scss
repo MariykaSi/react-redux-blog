@@ -1,6 +1,7 @@
 .post-item{
   padding-left: 15px!important;
   padding-right: 15px!important;
+  margin-bottom: 50px;
   .entry-cover{
     position: relative;
     a:before {
@@ -25,7 +26,7 @@
   .entry-title{
     display: block;
     font-weight: bold;
-    margin: 5px 0 16px;
+    margin: 27px 0 16px;
     padding-bottom: 18px;
     position: relative;
   }
@@ -47,12 +48,19 @@
     padding-left: 15px!important;
     padding-right: 15px!important;
     > a {
-    color: #a1a1a1;
-    font-size: 14px;
-    letter-spacing: 0.18px;
-    line-height: 2;
-    margin-top: 12px;
-    text-transform: uppercase;
+      color: #a1a1a1;
+      font-size: 14px;
+      letter-spacing: 0.18px;
+      line-height: 2;
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+    p{
+      color: #717171;
+      letter-spacing: 0.150px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-family: 'Hind', sans-serif;
     }
   }
 }

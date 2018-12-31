@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Nav from "../Nav/Nav";
 import "./Header.scss";
@@ -25,7 +26,9 @@ export default class Header extends Component {
               </li>
             </ul>
           </div>
-          <div className="col-md-4 col-lg-4 logo-block">minimag</div>
+          <div className="col-md-4 col-lg-4 logo-block">
+            <Link to={`/`}>minimag</Link>
+          </div>
           <div className="end-xs col-md-4 col-lg-4 top-right">
             <ul>
               <li>

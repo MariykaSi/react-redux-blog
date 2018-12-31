@@ -1,4 +1,4 @@
-import * as actionTypes from "../actions/posts";
+import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   fetching: false,
