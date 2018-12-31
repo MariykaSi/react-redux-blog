@@ -8,6 +8,7 @@ export default class ContactPage extends Component {
     return (
       <div className="page">
         <Header />
+        <main />
         <Footer />
       </div>
     );

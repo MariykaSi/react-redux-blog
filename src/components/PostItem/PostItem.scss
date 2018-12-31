@@ -4,20 +4,6 @@
   margin-bottom: 50px;
   .entry-cover{
     position: relative;
-    a:before {
-      background-color: rgba(0,0,0,0.35);
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      opacity: 0;
-      -webkit-transition: all 1s ease 0s;
-      -moz-transition: all 1s ease 0s;
-      -o-transition: all 1s ease 0s;
-      transition: all 1s ease 0s;
-    }
     img {
       max-width: 100%;
       height: auto;
@@ -40,9 +26,6 @@
     left: 0;
     right: 0;
     width: 30px;
-  }
-  :hover a:before {
-    opacity: 1;
   }
   .entry-content{
     padding-left: 15px!important;

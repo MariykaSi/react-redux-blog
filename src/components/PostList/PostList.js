@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import "./PostList.scss";
 import PostItem from "../PostItem/PostItem";
+import iconLoad from "../../img/icon-load.svg";
 
 class PostList extends Component {
   componentDidMount() {
@@ -11,15 +12,17 @@ class PostList extends Component {
   render() {
     const { posts, fetching, error } = this.props;
     return (
-      <main className="row center-xs">
+      <div className="row center-xs">
         <div className="row container page-content">
           {posts
             ? posts.map(post => <PostItem key={post.id} post={post} />)
             : ""}
-          {fetching ? <p>load...</p> : ""}
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 loading">
+            {fetching ? <img alt="" src={iconLoad} /> : ""}
+          </div>
           {error ? <p>eroor...</p> : ""}
         </div>
-      </main>
+      </div>
     );
   }
 }

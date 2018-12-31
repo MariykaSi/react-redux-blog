@@ -9,7 +9,11 @@ export default class HomePage extends Component {
     return (
       <div className="page">
         <Header />
-        <PostView id={this.props.match.params.id} />
+        <main>
+          <div className="row center-xs">
+            <PostView id={this.props.match.params.id} />
+          </div>
+        </main>
         <Footer />
       </div>
     );

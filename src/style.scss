@@ -27,6 +27,14 @@ body{
     margin-left: 0!important;
     margin-right: 0!important;
   }
+  .page{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main{
+    flex: 1;
+  }
 }
 @media (min-width: 992px){
   .container {

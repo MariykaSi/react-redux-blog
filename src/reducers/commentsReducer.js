@@ -3,26 +3,26 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   fetching: false,
   postId: 0,
-  post: [],
+  comments: [],
   error: null
 };
 
-export default function postsReducer(state = initialState, action) {
+export default function commentsReducer(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.API_CALL_REQUEST_ONE_POST:
+    case actionTypes.API_CALL_REQUEST_COMMENTS:
       return { ...state, fetching: true, error: null, postId: action.postId };
-    case actionTypes.API_CALL_SUCCESS_ONE_POST:
+    case actionTypes.API_CALL_SUCCESS_COMMENTS:
       return {
         ...state,
         fetching: false,
-        post: action.post,
+        comments: action.comments,
         postId: action.postId
       };
-    case actionTypes.API_CALL_FAILURE_ONE_POST:
+    case actionTypes.API_CALL_FAILURE_COMMENTS:
       return {
         ...state,
         fetching: false,
-        post: null,
+        comments: null,
         error: action.error
       };
     default:
