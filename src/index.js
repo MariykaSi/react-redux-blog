@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import "./styles/index.sass";
-import App from "./components/App/App";
+import "./style.scss";
+import App from "./App";
 import store from "./store";
 
 ReactDOM.render(

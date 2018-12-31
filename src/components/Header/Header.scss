@@ -1,0 +1,26 @@
+header{
+  .top-header{
+    padding-bottom: 30px;
+    padding-top: 33px;
+    align-items: center;
+    .top-right{
+      li{
+        margin-right: 0;
+      }
+    }
+    .logo-block{
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+    li{
+      margin-right: 16px
+    }
+    img{
+      width: 20px;
+    }
+  }
+}

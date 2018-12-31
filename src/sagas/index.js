@@ -1,12 +1,10 @@
 import { takeLatest, call, put } from "redux-saga/effects";
-import axios from "axios";
 
-export function* watcherSaga() {
-  yield takeLatest("API_CALL_REQUEST", workerSaga);
-}
+import * as actionTypes from "../actions/posts";
+import { fetchPosts } from "../libs/api";
 
-function fetchPosts() {
-  return axios.get("https://jsonplaceholder.typicode.com/posts");
+export default function* watcherSaga() {
+  yield takeLatest(actionTypes.API_CALL_REQUEST, workerSaga);
 }
 
 function* workerSaga() {
@@ -14,8 +12,8 @@ function* workerSaga() {
     const response = yield call(fetchPosts);
     const posts = response.data;
 
-    yield put({ type: "API_CALL_SUCCESS", posts });
+    yield put({ type: actionTypes.API_CALL_SUCCESS, posts });
   } catch (error) {
-    yield put({ type: "API_CALL_FAILURE", error });
+    yield put({ type: actionTypes.API_CALL_FAILURE, error });
   }
 }
