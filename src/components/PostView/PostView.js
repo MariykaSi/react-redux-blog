@@ -7,8 +7,8 @@ import getUserNameOfId from "../../selectors/getUserNameOfId";
 
 class PostView extends Component {
   componentDidMount() {
-    this.props.loadUsers();
     this.props.loadOne(this.props.id);
+    this.props.loadUsers();
     this.props.loadComments(this.props.id);
   }
   render() {

@@ -9,7 +9,7 @@ export default class Footer extends Component {
       <footer className="row">
         <Nav />
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 center-xs copyright">
-          <p>Copyright @ 2017 MINIMAG</p>
+          <p>Copyright @ 2019 MINIMAG</p>
         </div>
       </footer>
     );

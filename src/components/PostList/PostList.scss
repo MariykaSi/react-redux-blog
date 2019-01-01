@@ -3,5 +3,14 @@
     padding-bottom: 50px;
     .loading img{
        width: 30px; 
+       animation: loadingRotate infinite 1s linear;
+    }
+    @keyframes loadingRotate {
+      from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
 }

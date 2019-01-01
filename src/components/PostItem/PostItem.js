@@ -14,13 +14,15 @@ export default class PostItem extends Component {
             <img alt={post.title} src={itemBg} />
           </Link>
         </div>
-        <Link to={`/posts/${post.id}`} className="entry-title">
-          {post.title}
-        </Link>
         <div className="entry-content">
+          <Link to={`/posts/${post.id}`} className="entry-title">
+            {post.title}
+          </Link>
           <p>{post.body}</p>
-          <Link to={`/posts/${post.id}`}>Read More</Link>
         </div>
+        <Link className="read-more" to={`/posts/${post.id}`}>
+          Read More
+        </Link>
       </div>
     );
   }
