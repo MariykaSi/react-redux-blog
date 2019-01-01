@@ -1,3 +1,4 @@
+.page-content{
 .post-item{
   padding-left: 15px!important;
   padding-right: 15px!important;
@@ -28,8 +29,7 @@
     width: 30px;
   }
   .entry-content{
-    padding-left: 15px!important;
-    padding-right: 15px!important;
+    padding: 0 15px!important;
     > a {
       color: #a1a1a1;
       font-size: 14px;
@@ -46,4 +46,6 @@
       font-family: 'Hind', sans-serif;
     }
   }
+}
+
 }

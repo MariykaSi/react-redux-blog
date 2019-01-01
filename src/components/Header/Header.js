@@ -13,7 +13,7 @@ export default class Header extends Component {
     return (
       <header className="row center-xs">
         <div className="row top-header container">
-          <div className="col-md-4 col-lg-4 start-xs top-left">
+          <div className="col-sm-4 col-md-4 col-lg-4 start-xs top-left">
             <ul>
               <li>
                 <img alt="" src={iconFb} />
@@ -26,10 +26,10 @@ export default class Header extends Component {
               </li>
             </ul>
           </div>
-          <div className="col-md-4 col-lg-4 logo-block">
+          <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 logo-block">
             <Link to={`/`}>minimag</Link>
           </div>
-          <div className="end-xs col-md-4 col-lg-4 top-right">
+          <div className="col-sm-4 col-md-4 col-lg-4 end-xs top-right">
             <ul>
               <li>
                 <img alt="" src={iconSearch} />

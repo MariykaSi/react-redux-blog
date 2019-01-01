@@ -1,13 +1,33 @@
-h1{
-  font-size: 28px;
-  margin: 0 0 20px 0;
+.page-content{
+  .entry-cover{
+    img{
+      width: 100%;
+    }
+  }
+  .entry-content{
+    padding: 40px 30px 40px 40px!important;
+    h1{
+      font-size: 28px;
+      margin: 0;
+    }
+    h2{
+      font-size: 18px;
+    }
+    h3{
+      font-size: 16px;
+    }
+    .entry-comments{
+      b{
+        font-style: italic;
+      }
+      p{
+        margin: 5px 0;
+      }
+    }   
+  }
 }
-h2{
-  font-size: 18px;
-}
-h3{
-  font-size: 16px;
-}
-.entry-comments p{
-  font-style: italic;
+@media (max-width: 768px){
+  .page-content .entry-content {
+      padding: 15px !important;
+  }
 }

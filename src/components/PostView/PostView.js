@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import itemBg from "../../img/item-bg.jpg";
+import itemBg from "../../img/itemBg.jpg";
 import "./PostView.scss";
 import getUserNameOfId from "../../selectors/getUserNameOfId";
 
@@ -15,21 +15,22 @@ class PostView extends Component {
     const { post, users, comments } = this.props;
     return (
       <div className="row container page-content start-xs">
-        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 entry-cover">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry-cover">
           <img alt={post.title} src={itemBg} />
         </div>
-        <div className="col-xs-12 col-sm-8 col-md-8 col-lg-8 entry-content">
+        <div className="col-xs-12 col-sm-10 col-md-10 col-lg-10 entry-content">
           <h1>{post.title}</h1>
-          <h2>{getUserNameOfId(users, post.userId)}</h2>
+          <h2>Аuthor: {getUserNameOfId(users, post.userId)}</h2>
           <p>{post.body}</p>
-        </div>
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry-comments">
-          <h3>Comments</h3>
-          <p>
+          <div className="entry-comments">
+            <h3>Comments:</h3>
             {comments.map(comment => (
-              <p>{comment.name}</p>
+              <div key={comment.id}>
+                <b>{comment.email}</b>
+                <p>{comment.name}</p>
+              </div>
             ))}
-          </p>
+          </div>
         </div>
       </div>
     );
