@@ -30,7 +30,7 @@ class PostList extends Component {
                 ))
               : null}
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 paginator">
             {paginatorData && pages ? (
               <Paginator
                 setPagination={setPagination}
@@ -39,10 +39,16 @@ class PostList extends Component {
               />
             ) : null}
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 loading">
-            {fetching ? <img alt="" src={iconLoad} /> : null}
-            {error ? <p>eroor...</p> : null}
-          </div>
+          {fetching ? (
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 loading">
+              <img alt="" src={iconLoad} />
+            </div>
+          ) : null}
+          {error ? (
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 loading">
+              eroor...
+            </div>
+          ) : null}
         </div>
       </div>
     );

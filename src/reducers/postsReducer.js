@@ -13,6 +13,7 @@ const initialState = {
 };
 
 let paginator = new Paginator(initialState.postsCount, 5);
+
 export default function postsReducer(state = initialState, action) {
   switch (action.type) {
     case actionTypes.API_CALL_REQUEST:

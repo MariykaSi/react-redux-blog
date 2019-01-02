@@ -5,6 +5,10 @@
        width: 30px; 
        animation: loadingRotate infinite 1s linear;
     }
+    .paginator{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
     @keyframes loadingRotate {
       from {
             transform: rotate(0deg);

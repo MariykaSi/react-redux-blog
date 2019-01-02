@@ -1,12 +1,33 @@
-li{
-  margin: 0 5px;
-  a{
-    cursor: pointer;
+.pagination{
+  li{
+    padding: 5px 15px;
+    margin: 5px 0;
+    font-weight: bold;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    a{
+      cursor: pointer;
+    }
+  }
+  .disabled{
+    opacity: 0.5;
+    a{
+      cursor: inherit;
+    }
+  }
+  .active{
+    background-color: #ebebeb;
+  }
+  li:first-child{
+      border-left: 0;
+  }
+  li:last-child{
+      border-right: 0;
+  }
+  @media (max-width: 768px){
+    li{
+      padding: 3px 8px;
+    }
   }
 }
-.disabled{
-  opacity: 0.5;
-  a{
-    cursor: inherit;
-  }
-}
+
