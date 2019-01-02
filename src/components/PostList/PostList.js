@@ -17,9 +17,7 @@ class PostList extends Component {
       <div className="row center-xs">
         <div className="row container page-content">
           {posts
-            ? posts
-                .map(post => <PostItem key={post.id} post={post} />)
-                .slice(0, 9)
+            ? posts.map(post => <PostItem key={post.id} post={post} />)
             : ""}
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination">
             <button>1</button>
