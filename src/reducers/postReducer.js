@@ -2,7 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   fetching: false,
-  postId: 0,
+  postId: null,
   post: [],
   error: null
 };

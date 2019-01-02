@@ -19,10 +19,6 @@ class PostList extends Component {
           {posts
             ? posts.map(post => <PostItem key={post.id} post={post} />)
             : ""}
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination">
-            <button>1</button>
-            <button>2</button>
-          </div>
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 loading">
             {fetching ? <img alt="" src={iconLoad} /> : ""}
             {error ? <p>eroor...</p> : ""}
