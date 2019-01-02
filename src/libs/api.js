@@ -15,5 +15,5 @@ export function fetchUsers() {
 }
 
 export function fetchComments(id) {
-  return axios.get(`${baseUrl}/posts/${id}/comments`);
+  return axios.get(`${baseUrl}/comments?postId=${id}`);
 }
