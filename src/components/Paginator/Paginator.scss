@@ -1,0 +1,12 @@
+li{
+  margin: 0 5px;
+  a{
+    cursor: pointer;
+  }
+}
+.disabled{
+  opacity: 0.5;
+  a{
+    cursor: inherit;
+  }
+}

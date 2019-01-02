@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import itemBg from "../../img/itemBg.jpg";
 import "./PostView.scss";
+import * as actionTypes from "../../actions/actionTypes";
 import getUserNameOfId from "../../selectors/getUserNameOfId";
 
 class PostView extends Component {
@@ -44,10 +45,11 @@ const mapState = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  loadOne: id => dispatch({ type: "API_CALL_REQUEST_ONE_POST", postId: id }),
+  loadOne: id =>
+    dispatch({ type: actionTypes.API_CALL_REQUEST_ONE_POST, postId: id }),
   loadComments: id =>
-    dispatch({ type: "API_CALL_REQUEST_COMMENTS", postId: id }),
-  loadUsers: () => dispatch({ type: "API_CALL_REQUEST_USERS" })
+    dispatch({ type: actionTypes.API_CALL_REQUEST_COMMENTS, postId: id }),
+  loadUsers: () => dispatch({ type: actionTypes.API_CALL_REQUEST_USERS })
 });
 
 export default connect(
