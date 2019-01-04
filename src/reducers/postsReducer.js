@@ -38,11 +38,13 @@ export default function postsReducer(state = initialState, action) {
         state.posts.length,
         action.currentPage
       );
+
       let pagesUpdate = [
         ...Array(
           paginatorDataUpdate.last_page + 1 - paginatorDataUpdate.first_page
         ).keys()
       ].map(index => paginatorDataUpdate.first_page + index);
+
       let paginatedPostsUpdate = state.posts.slice(
         paginatorDataUpdate.first_result,
         paginatorDataUpdate.last_result + 1

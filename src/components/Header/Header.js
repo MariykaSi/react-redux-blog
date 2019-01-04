@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 import Nav from "../Nav/Nav";
 import "./Header.scss";
-import iconFb from "../../img/fb-icon.svg";
-import iconTwit from "../../img/twit-icon.svg";
-import iconLink from "../../img/link-icon.svg";
-import iconSearch from "../../img/search-icon.svg";
+import iconFb from "../../utils/img/fb-icon.svg";
+import iconTwit from "../../utils/img/twit-icon.svg";
+import iconLink from "../../utils/img/link-icon.svg";
+import iconSearch from "../../utils/img/search-icon.svg";
 
 export default class Header extends Component {
   render() {

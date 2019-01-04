@@ -5,7 +5,7 @@ import "./PostList.scss";
 import PostItem from "../PostItem/PostItem";
 import Paginator from "../Paginator/Paginator";
 import * as actionTypes from "../../actions/actionTypes";
-import iconLoad from "../../img/icon-load.svg";
+import iconLoad from "../../utils/img/icon-load.svg";
 
 class PostList extends Component {
   componentDidMount() {
