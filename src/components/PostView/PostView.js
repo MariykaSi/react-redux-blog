@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import itemBg from "../../utils/img/itemBg.jpg";
 import "./PostView.scss";
 import * as actionTypes from "../../actions/actionTypes";
-import getUserNameOfId from "../../selectors/getUserNameOfId";
+import getUserNameOfId from "../../utils/selectors/getUserNameOfId";
 
 class PostView extends Component {
   componentDidMount() {
