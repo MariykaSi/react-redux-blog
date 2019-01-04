@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./PostItem.scss";
-import itemBg from "../../img/itemBg.jpg";
+import itemBg from "../../utils/img/itemBg.jpg";
 import { Link } from "react-router-dom";
 
 export default class PostItem extends Component {

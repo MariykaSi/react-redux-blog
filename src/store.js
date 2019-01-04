@@ -1,21 +1,8 @@
-import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 
-import rootSaga from "./sagas/index";
-import {
-  postsReducer,
-  postReducer,
-  usersReducer,
-  commentsReducer
-} from "./reducers";
-
-const rootReducer = combineReducers({
-  postsReducer,
-  postReducer,
-  usersReducer,
-  commentsReducer
-});
-
+import rootSaga from "./sagas";
+import rootReducer from "./reducers";
 const sagaMiddleware = createSagaMiddleware();
 
 const reduxDevTools =
