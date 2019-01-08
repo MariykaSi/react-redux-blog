@@ -32,7 +32,7 @@ export default class Header extends Component {
           <div className="col-sm-4 col-md-4 col-lg-4 end-xs top-right">
             <ul>
               <li>
-                <img alt="" src={iconSearch} />
+                {/* <img alt="" src={iconSearch} /> */}
               </li>
             </ul>
           </div>
